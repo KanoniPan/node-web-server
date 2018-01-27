@@ -50,12 +50,18 @@ app.get('/', (req, res) => {
   });
  });
 
-  app.get('/about', (req,res) => {
+  app.get('/about', (req, res) => {
     res.render('about.hbs', {
       pageTitle: 'About Page',
 
     });
   //  res.send('About Page');
+  });
+  app.get('/projects', (req, res) => {
+      res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        gitHub: 'https://github.com/KanoniPan?tab=repositories'
+      })
   });
 
   app.get('/bad', (req, res) => {
